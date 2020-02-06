@@ -5,18 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Movie_Library.Business
-{
+{/// <summary>
+/// Represents a movie.
+/// </summary>
     public class Movie
     {
 
-        string title;
+        public string title;
+        /// <summary>
+        /// Run Length in minutes.
+        /// </summary>
+        public int runLength;
 
-        string runLength;
+        public string description;
 
-        string description;
+        public int releaseYear = 1900;
 
-        string releaseYear;
-
-        string classic;
+        public bool classic;
     }
 }
