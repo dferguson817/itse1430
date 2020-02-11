@@ -11,7 +11,12 @@ namespace Movie_Library.Business
     public class Movie
     {
 
-        public string title;
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+        private string _title;
         /// <summary>
         /// Run Length in minutes.
         /// </summary>
@@ -21,6 +26,7 @@ namespace Movie_Library.Business
 
         public int releaseYear = 1900;
 
-        public bool classic;
+        public bool isClassic;
+        
     }
 }
