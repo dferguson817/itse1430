@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Movie_Library.Business;
+using MovieLibrary.Business;
 using MovieLibrary.Winforms;
 
 namespace Movie_Library
 {
     public partial class MainForm : Form
     {
+       
+
         public MainForm ()
         {
             InitializeComponent();
@@ -21,8 +23,8 @@ namespace Movie_Library
             
             var movie = new Movie();
                 
-            movie.title = "Jaws";
-            movie.description = movie.title;
+            //movie.title = "Jaws";
+            //movie.description = movie.title;
 
             movie = new Movie();
 
@@ -56,8 +58,8 @@ namespace Movie_Library
             if (movie == null)
                 return;
 
-            var title = movie.title;
-            movie.description = "Test";
+           // var title = movie.title;
+           // movie.description = "Test";
 
             movie = new Movie();
         }
@@ -70,9 +72,36 @@ namespace Movie_Library
                 return;
 
             //TODO : Save the Movie
+            _movie = child.Movie;
             //child.Show();
         }
 
- 
+        private Movie _movie;
+
+
+        private void OnMovieDelete ( object sender, EventArgs e )
+        {
+            //Verify movie
+            if (_movie == null)
+                return;
+
+            if (!DisplayConfirmation($"Are you sure you want to delete {_movie.Title}?", "Delete"))
+                return;
+
+            //TODO: delete
+            _movie = null;
+         }
+
+        private void OnFileExit ( object sender, EventArgs e )
+        {
+            Close();
+        }
+
+        private void OnHelpAbout ( object sender, EventArgs e )
+        {
+            var about = new AboutBox();
+
+            about.ShowDialog(this);
+        }
     }
 }
