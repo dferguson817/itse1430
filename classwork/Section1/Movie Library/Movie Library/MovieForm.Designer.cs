@@ -39,6 +39,8 @@
             this.txtDESCRIPTION = new System.Windows.Forms.TextBox();
             this.txtRUNLENGTH = new System.Windows.Forms.TextBox();
             this.txtTITLE = new System.Windows.Forms.TextBox();
+            this.ddlGenres = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOK
@@ -135,11 +137,30 @@
             this.txtTITLE.Size = new System.Drawing.Size(100, 20);
             this.txtTITLE.TabIndex = 10;
             // 
+            // ddlGenres
+            // 
+            this.ddlGenres.FormattingEnabled = true;
+            this.ddlGenres.Location = new System.Drawing.Point(132, 292);
+            this.ddlGenres.Name = "ddlGenres";
+            this.ddlGenres.Size = new System.Drawing.Size(121, 21);
+            this.ddlGenres.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 292);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Search";
+            // 
             // MovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.ddlGenres);
             this.Controls.Add(this.txtTITLE);
             this.Controls.Add(this.txtRUNLENGTH);
             this.Controls.Add(this.txtDESCRIPTION);
@@ -175,5 +196,7 @@
         private System.Windows.Forms.TextBox txtDESCRIPTION;
         private System.Windows.Forms.TextBox txtRUNLENGTH;
         private System.Windows.Forms.TextBox txtTITLE;
+        private System.Windows.Forms.ComboBox ddlGenres;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Movie_Library
+﻿namespace MovieLibrary
 {
     partial class MainForm
     {
