@@ -146,6 +146,11 @@ namespace MovieLibrary.Winforms
 
             return -1;
         }
+
+        private void TxtTITLE_TextChanged ( object sender, EventArgs e )
+        {
+
+        }
     }
 }
 
